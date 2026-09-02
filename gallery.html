@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Collection — ArtGallery</title>
+
+    <meta
+        name="description"
+        content="Explorez notre collection d'œuvres d'art."
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                ARTGALLERY
+            </a>
+
+            <button
+                class="menu-button"
+                id="menu-button"
+                aria-label="Ouvrir le menu"
+            >
+                ☰
+            </button>
+
+            <div class="nav-links" id="nav-links">
+
+                <a href="index.html">
+                    Accueil
+                </a>
+
+                <a href="gallery.html" class="active">
+                    Collection
+                </a>
+
+                <a href="artists.html">
+                    Artistes
+                </a>
+
+                <a href="about.html">
+                    À propos
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- EN-TÊTE -->
+
+        <section class="page-header">
+
+            <p class="section-label">
+                LA COLLECTION
+            </p>
+
+            <h1>
+                Les <em>œuvres.</em>
+            </h1>
+
+            <p>
+                Parcourez notre sélection d'œuvres
+                et découvrez différents styles artistiques.
+            </p>
+
+        </section>
+
+
+        <!-- RECHERCHE -->
+
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Rechercher une œuvre..."
+                    aria-label="Rechercher une œuvre"
+                >
+
+                <button id="search-button">
+                    Rechercher
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- FILTRES -->
+
+        <section class="filters">
+
+            <button class="filter active" data-filter="all">
+                Toutes
+            </button>
+
+            <button class="filter" data-filter="painting">
+                Peinture
+            </button>
+
+            <button class="filter" data-filter="sculpture">
+                Sculpture
+            </button>
+
+            <button class="filter" data-filter="photography">
+                Photographie
+            </button>
+
+        </section>
+
+
+        <!-- COLLECTION -->
+
+        <section class="gallery-section">
+
+            <div class="gallery-grid" id="gallery-grid">
+
+                <article class="artwork-card">
+
+                    <div class="artwork-image">
+
+                        <img
+                            src="images/oeuvre1.jpg"
+                            alt="Œuvre d'art"
+                        >
+
+                    </div>
+
+                    <div class="artwork-info">
+
+                        <div>
+
+                            <p class="artwork-category">
+                                PEINTURE
+                            </p>
+
+                            <h3>
+                                Œuvre numéro 01
+                            </h3>
+
+                            <p>
+                                Artiste contemporain
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIED DE PAGE -->
+
+    <footer class="footer">
+
+        <div class="footer-top">
+
+            <div class="footer-logo">
+                ARTGALLERY
+            </div>
+
+            <p>
+                Découvrez l'art.<br>
+                Découvrez les artistes.
+            </p>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 ARTGALLERY
+            </span>
+
+            <span>
+                Galerie d'art en ligne
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
