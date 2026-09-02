@@ -15,7 +15,7 @@ const getArtworks = async (req, res) => {
         if (!response.ok) {
             throw new Error(`Response status: ${response.status}`);
         }
-         const result = await response.json();
+        const result = await response.json();
         return ok(res, result)
     } catch (err) {
         return fail(res, 500, err.message)
@@ -34,7 +34,7 @@ const getArtiste = async (req, res) => {
         if (!response.ok) {
             throw new Error(`Response status: ${response.status}`);
         }
-         const result = await response.json();
+        const result = await response.json();
         return ok(res, result)
     } catch (err) {
         return fail(res, 500, err.message)
