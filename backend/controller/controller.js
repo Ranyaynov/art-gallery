@@ -40,3 +40,8 @@ const getArtiste = async (req, res) => {
         return fail(res, 500, err.message)
     }
 }
+
+
+module.exports = {
+    getArtworks
+}
