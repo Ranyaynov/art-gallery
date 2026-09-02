@@ -9,6 +9,8 @@ On choisit Art Institute of Chicago API
 ## Conséquences 
 Positives: 
 - Il est public donc gratuit
+- Il est rapide
+- Contient beacoup d'arts
 
 Négatives:
 - On ne peux pas ajouters nos arts
