@@ -43,5 +43,6 @@ const getArtiste = async (req, res) => {
 
 
 module.exports = {
-    getArtworks
+    getArtworks,
+    getArtiste
 }
