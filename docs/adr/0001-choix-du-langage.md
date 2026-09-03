@@ -1,6 +1,6 @@
 # Choix du language
 
-##Frontend
+## Frontend
 
 choix: 
 -HTML
@@ -10,7 +10,7 @@ choix:
 Pourquoi:
 Nous avons fait le choix d'utiliser du javascripte notament pour faire des animations et rendre le site agréable à parcourir.
 
-##Backend
+## Backend
 
 Choix:
 -JS
