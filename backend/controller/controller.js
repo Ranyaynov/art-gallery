@@ -22,27 +22,33 @@ const getArtworks = async (req, res) => {
     }
 }
 
-const getArtiste = async (req, res) => {
-    const { page, limit } = req.body;
+const getArtist = async (req, res) => {
+    const { id } = req.body;
 
-    if (!page, !limit) {
-        return fail(res, 400, 'page et limit requis')
+    if (!id) {
+        return fail(res, 400, 'id requis');
     }
 
     try {
-        const response = await fetch(`https://api.artic.edu/api/v1/artworks?fields=${id},artist_display`);
+        const response = await fetch(
+            `https://api.artic.edu/api/v1/artworks/${id}?fields=artist_title`
+        );
+
         if (!response.ok) {
             throw new Error(`Response status: ${response.status}`);
         }
-         const result = await response.json();
-        return ok(res, result)
+
+        const result = await response.json();
+
+        return ok(res, result.data.artist_title);
+
     } catch (err) {
-        return fail(res, 500, err.message)
+        return fail(res, 500, err.message);
     }
 }
 
 
 module.exports = {
     getArtworks,
-    getArtiste
+    getArtist
 }
