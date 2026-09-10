@@ -38,8 +38,13 @@ npm start
 
 ## Visuel
 
-![alt text](image.png)
-![alt text](image-1.png)
+<p align="center">
+  <img src="image.png" alt="Page d'accueil Art Gallery" width="100%">
+</p>
+
+<p align="center">
+  <img src="image-1.png" alt="Page artistes Art Gallery" width="100%">
+</p>
 
 ## Architecture
 
@@ -69,3 +74,7 @@ art-gallery/
 ## Support
 
 *Le projet n'est pas supporté.*
+
+## Licence
+
+Projet pédagogique, non destiné à la diffusion
