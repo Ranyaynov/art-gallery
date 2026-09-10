@@ -39,7 +39,7 @@ const getArtist = async (req, res) => {
 
         const result = await response.json();
 
-        return ok(res, result.data.artist_title);
+        return ok(res, result)
 
     } catch (err) {
         return fail(res, 500, err.message);
