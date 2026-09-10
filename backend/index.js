@@ -13,5 +13,5 @@ app.use(express.static(path.join(__dirname, '..', 'frontend')));
 app.use('/api', router);
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+    console.log(`Site lancé sur : http://localhost:${port}/pages/index.html`)
 })
