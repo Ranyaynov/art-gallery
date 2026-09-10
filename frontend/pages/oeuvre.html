@@ -1,37 +1,30 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Galerie - Œuvres</title>
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-
-  <body>
-    <header class="navbar">
-      <div class="navbar-container">
-        <a href="oeuvre.html" class="logo">Art Gallery</a>
-
-        <nav>
-          <a href="oeuvre.html" class="active">Œuvres</a>
-          <a href="artiste.html">Artistes</a>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <section class="hero">
-        <h1>Les œuvres</h1>
-        <p>Découvrez les œuvres provenant de l'Art Institute of Chicago.</p>
-      </section>
-
-      <section class="gallery-section">
-        <div id="artworks-container" class="gallery-grid">
-          <p class="loading">Chargement des œuvres...</p>
-        </div>
-      </section>
-    </main>
-
-    <script type="module" src="./js/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Gallery — Œuvres</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="module" src="../js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+  <header class="navbar"><div class="navbar-container">
+    <a href="oeuvre.html" class="logo">Art Gallery<span>Une fenêtre sur l’art</span></a>
+    <nav aria-label="Navigation principale"><a href="oeuvre.html" class="active" aria-current="page">Œuvres</a><a href="artiste.html">Artistes</a></nav>
+  </div></header>
+  <main id="main">
+    <section class="hero">
+      <p class="eyebrow">La collection · Art Institute of Chicago</p>
+      <h1>L’art, sous toutes ses formes.</h1>
+      <p>Explorez les œuvres du musée, leurs histoires et les artistes qui leur donnent vie.</p>
+    </section>
+    <section class="gallery-section" aria-label="Galerie des œuvres">
+      <div class="toolbar"><div class="search-field"><label for="search">Rechercher sur cette page</label><input id="search" type="search" placeholder="Un titre, un artiste, une technique…" disabled></div><p id="status" role="status" aria-live="polite"></p></div>
+      <div id="artworks-container" class="gallery-grid" aria-busy="true"><p class="loading">Chargement de la collection…</p></div>
+      <nav class="pagination" aria-label="Pagination de la collection"><button id="previous" type="button" disabled>← Précédent</button><span id="page-label">Page 1</span><button id="next" type="button" disabled>Suivant →</button></nav>
+    </section>
+  </main>
+  <footer>Art Gallery <span>Collection : Art Institute of Chicago</span></footer>
+</body>
 </html>
