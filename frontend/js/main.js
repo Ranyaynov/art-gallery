@@ -1,25 +1,38 @@
-// Fichier qui créé les cartes des artistes / oeuvres
+import { getArtworks, getArtistes } from './api.js';
 
-// On appelle la fonction de notre service
-async function afficherGalerie() {
-    // On va chercher les données via le service
-    const oeuvres = await fetchArtworks();
+const loadArtworks = async () => {
+    try {
+        const data = await getArtworks(1, 100);
 
-    // On cible notre grille HTML
-    const galleryGrid = document.querySelector('.gallery-grid');
+        console.log('Œuvres récupérées :', data);
 
-    // On crée le HTML pour chaque œuvre
-    oeuvres.forEach(oeuvre => {
-        galleryGrid.innerHTML += `
-    <article class="art-card">
-        <img src="${oeuvre.image}" alt="Peinture de ${oeuvre.artiste}">
-        <h2>${oeuvre.titre}</h2>
-        <p>Par : ${oeuvre.artiste}</p>
-    </article>
-`;
-        // ... (Création des <article>, <img>, <h2>, etc.)
-    });
-}
+        // Les œuvres sont généralement dans data.data
+        if (data.data) {
+            console.log(data.data);
+        }
+    } catch (error) {
+        console.error(error);
+    }
+};
 
-// On lance la fonction au chargement de la page
-afficherGalerie();
+const loadArtistes = async () => {
+    try {
+        const data = await getArtistes(1, 100);
+
+        console.log('Artistes récupérés :', data);
+
+        // Les artistes sont généralement dans data.data
+        if (data.data) {
+            console.log(data.data);
+        }
+    } catch (error) {
+        console.error(error);
+    }
+};
+
+const init = async () => {
+    await loadArtworks();
+    await loadArtistes();
+};
+
+init();

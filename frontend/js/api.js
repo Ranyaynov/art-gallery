@@ -1,11 +1,40 @@
-// Fichier qui demande au serveur les données des artistes / oeuvres
-async function fetchArtworks() {
+const API_URL = 'http://localhost:3000/api';
+
+const getArtworks = async (page = 1, limit = 100) => {
     try {
-        const response = await fetch('http://localhost:3000/api/artworks');
-        const data = await response.json();
-        return data; // Renvoie juste les données (images, artistes)
+        const response = await fetch(
+            `${API_URL}/artworks?page=${page}&limit=${limit}`
+        );
+
+        if (!response.ok) {
+            throw new Error(`Erreur HTTP : ${response.status}`);
+        }
+
+        return await response.json();
     } catch (error) {
-        console.error("Erreur de connexion au serveur :", error);
-        return [];
+        console.error('Erreur lors de la récupération des œuvres :', error);
+        throw error;
     }
-}
+};
+
+const getArtistes = async (page = 1, limit = 100) => {
+    try {
+        const response = await fetch(
+            `${API_URL}/artistes?page=${page}&limit=${limit}`
+        );
+
+        if (!response.ok) {
+            throw new Error(`Erreur HTTP : ${response.status}`);
+        }
+
+        return await response.json();
+    } catch (error) {
+        console.error('Erreur lors de la récupération des artistes :', error);
+        throw error;
+    }
+};
+
+export {
+    getArtworks,
+    getArtistes
+};

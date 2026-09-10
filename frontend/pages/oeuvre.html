@@ -1,19 +1,37 @@
 <!doctype html>
 <html lang="fr">
   <head>
-    <link rel="stylesheet" href="../css/style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accueil</title>
+    <title>Galerie - Œuvres</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
+
   <body>
-    <div class="gallery-grid">
-      <article class="art-card">
-        <img src="" alt=" " />
-        <h2></h2>
-        <p></p>
-        <span></span>
-      </article>
-    </div>
+    <header class="navbar">
+      <div class="navbar-container">
+        <a href="oeuvre.html" class="logo">Art Gallery</a>
+
+        <nav>
+          <a href="oeuvre.html" class="active">Œuvres</a>
+          <a href="artiste.html">Artistes</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Les œuvres</h1>
+        <p>Découvrez les œuvres provenant de l'Art Institute of Chicago.</p>
+      </section>
+
+      <section class="gallery-section">
+        <div id="artworks-container" class="gallery-grid">
+          <p class="loading">Chargement des œuvres...</p>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
