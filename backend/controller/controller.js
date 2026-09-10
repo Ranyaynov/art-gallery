@@ -23,16 +23,15 @@ const getArtworks = async (req, res) => {
 }
 
 const getArtist = async (req, res) => {
-    const { id } = req.body;
+    const { page, limit } = req.body;
 
-    if (!id) {
+    if (!page || !limit) {
         return fail(res, 400, 'id requis');
     }
 
     try {
         const response = await fetch(
-            `https://api.artic.edu/api/v1/artworks/${id}?fields=artist_title`
-        );
+            `https://api.artic.edu/api/v1/agents?page=${page}&limit=${limit}`);
 
         if (!response.ok) {
             throw new Error(`Response status: ${response.status}`);
