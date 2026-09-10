@@ -1,19 +1,140 @@
 <!doctype html>
 <html lang="fr">
   <head>
-    <link rel="stylesheet" href="../css/style.css" />
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accueil</title>
+
+    <title>Collection — ArtGallery</title>
+
+    <meta
+      name="description"
+      content="Explorez notre collection d'œuvres d'art."
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
+
   <body>
-    <div class="gallery-grid">
-      <article class="art-card">
-        <img src="" alt=" " />
-        <h2></h2>
-        <p></p>
-        <span></span>
-      </article>
-    </div>
+    <a class="skip-link" href="#main">Aller au contenu</a>
+
+    <!-- NAVIGATION -->
+
+    <header class="header">
+      <nav class="navbar">
+        <a href="index.html" class="logo"> ARTGALLERY </a>
+
+        <button
+          class="menu-button"
+          id="menu-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-links"
+          aria-label="Ouvrir le menu"
+        >
+          ☰
+        </button>
+
+        <div class="nav-links" id="nav-links">
+          <a href="index.html"> Accueil </a>
+
+          <a href="oeuvre.html" class="active" aria-current="page">
+            Collection
+          </a>
+
+          <a href="artiste.html"> Artistes </a>
+
+          <a href="index.html#about"> À propos </a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- EN-TÊTE -->
+
+      <section class="page-header">
+        <p class="section-label">LA COLLECTION</p>
+
+        <h1>Les <em>œuvres.</em></h1>
+
+        <p>
+          Parcourez notre sélection d'œuvres et découvrez différents styles
+          artistiques.
+        </p>
+      </section>
+
+      <!-- RECHERCHE -->
+
+      <section class="search-section">
+        <div class="search-box">
+          <input
+            type="search"
+            id="search-input"
+            placeholder="Rechercher sur cette page…"
+            aria-label="Rechercher une œuvre sur cette page"
+            disabled
+          />
+
+          <button id="search-button">Rechercher</button>
+        </div>
+      </section>
+
+      <!-- FILTRES -->
+
+      <section class="filters">
+        <button class="filter active" data-filter="all" aria-pressed="true">
+          Toutes
+        </button>
+
+        <button class="filter" data-filter="painting" aria-pressed="false">
+          Peinture
+        </button>
+
+        <button class="filter" data-filter="sculpture" aria-pressed="false">
+          Sculpture
+        </button>
+
+        <button class="filter" data-filter="photography" aria-pressed="false">
+          Photographie
+        </button>
+      </section>
+
+      <!-- COLLECTION -->
+
+      <section class="gallery-section">
+        <p id="collection-status" role="status" aria-live="polite"></p>
+
+        <div class="gallery-grid" id="gallery-grid" aria-busy="true">
+          <p class="collection-message">Chargement de la collection…</p>
+        </div>
+
+        <nav class="pagination" aria-label="Pagination de la collection">
+          <button id="previous" type="button" disabled>← Précédent</button
+          ><span id="page-label" aria-live="polite">Page 1</span
+          ><button id="next" type="button" disabled>Suivant →</button>
+        </nav>
+      </section>
+    </main>
+
+    <!-- PIED DE PAGE -->
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-logo">ARTGALLERY</div>
+
+        <p>
+          Découvrez l'art.<br />
+          Découvrez les artistes.
+        </p>
+      </div>
+
+      <div class="footer-bottom">
+        <span> © 2026 ARTGALLERY </span>
+
+        <span> Galerie d'art en ligne </span>
+      </div>
+    </footer>
+
+    <script type="module" src="/js/main.js"></script>
   </body>
 </html>
