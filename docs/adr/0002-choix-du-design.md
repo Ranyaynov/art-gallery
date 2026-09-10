@@ -1,4 +1,4 @@
-# Choix du design
+# ADR 0002: Choix du design
 
 ## 1. Contexte et Problème
 Notre projet de galerie d'art nécessite une interface soignée, esthétique. Le code CSS peut très vite devenir chaotique, difficile à lire et créer des conflits entre les différentes pages si nous n'avons pas de règles claires. Nous devons décider comment nous allons structurer notre code de style pour ce projet.
