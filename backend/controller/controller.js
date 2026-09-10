@@ -38,7 +38,6 @@ const getArtist = async (req, res) => {
         if (!response.ok) {
             throw new Error(`Response status: ${response.status}`);
         }
-
         const result = await response.json();
 
         return ok(res, result)
