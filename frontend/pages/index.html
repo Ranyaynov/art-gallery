@@ -1,10 +1,277 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <link rel="stylesheet" href="../css/style.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accueil</title>
-  </head>
-  <body></body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Galerie d'art — Découvrez l'art</title>
+
+    <meta
+        name="description"
+        content="Découvrez notre galerie d'art en ligne et explorez des œuvres et des artistes du monde entier."
+    >
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+<a class="skip-link" href="#main">Aller au contenu</a>
+
+    <!-- NAVIGATION -->
+    <header class="header">
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                ARTGALLERY
+            </a>
+
+            <button class="menu-button" id="menu-button" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Ouvrir le menu">
+                ☰
+            </button>
+
+            <div class="nav-links" id="nav-links">
+                <a href="index.html" class="active" aria-current="page">Accueil</a>
+                <a href="oeuvre.html">Collection</a>
+                <a href="artiste.html">Artistes</a>
+                <a href="index.html#about">À propos</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- HERO -->
+    <main id="main">
+
+        <section class="hero">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <p class="small-title">
+                    GALERIE D'ART EN LIGNE
+                </p>
+
+                <h1>
+                    Découvrez<br>
+                    <em>l'art.</em>
+                </h1>
+
+                <p class="hero-description">
+                    Explorez une collection d'œuvres remarquables
+                    et découvrez les artistes qui ont marqué
+                    l'histoire de l'art.
+                </p>
+
+                <a href="oeuvre.html" class="button">
+                    Explorer la collection
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTRODUCTION -->
+        <section class="intro section" id="about">
+
+            <div class="intro-number">
+                01
+            </div>
+
+            <div class="intro-content">
+
+                <p class="section-label">
+                    LA COLLECTION
+                </p>
+
+                <h2>
+                    Un voyage à travers<br>
+                    <em>l'histoire de l'art.</em>
+                </h2>
+
+                <p>
+                    De la peinture classique à l'art contemporain,
+                    notre galerie vous invite à découvrir des œuvres
+                    emblématiques et des artistes aux univers uniques.
+                </p>
+
+                <a href="oeuvre.html" class="text-link">
+                    Voir toutes les œuvres →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ŒUVRES À LA UNE -->
+        <section class="featured section">
+
+            <div class="section-header">
+
+                <div>
+                    <p class="section-label">
+                        SÉLECTION
+                    </p>
+
+                    <h2>
+                        Œuvres à la une
+                    </h2>
+                </div>
+
+                <a href="oeuvre.html" class="text-link">
+                    Toute la collection →
+                </a>
+
+            </div>
+
+
+            <div class="artwork-grid" id="featured-artworks" aria-busy="true"><p class="collection-message">Chargement des œuvres…</p></div>
+
+        </section>
+
+
+        <!-- PÉRIODES -->
+        <section class="periods section">
+
+            <div class="periods-intro">
+
+                <p class="section-label">
+                    PÉRIODES
+                </p>
+
+                <h2>
+                    Explorez<br>
+                    les différentes<br>
+                    <em>époques.</em>
+                </h2>
+
+            </div>
+
+
+            <div class="period-list">
+
+                <a href="oeuvre.html?period=antiquite" class="period-item">
+                    <span>01</span>
+                    <strong>Antiquité</strong>
+                    <span>→</span>
+                </a>
+
+                <a href="oeuvre.html?period=renaissance" class="period-item">
+                    <span>02</span>
+                    <strong>Renaissance</strong>
+                    <span>→</span>
+                </a>
+
+                <a href="oeuvre.html?period=moderne" class="period-item">
+                    <span>03</span>
+                    <strong>Art moderne</strong>
+                    <span>→</span>
+                </a>
+
+                <a href="oeuvre.html?period=contemporain" class="period-item">
+                    <span>04</span>
+                    <strong>Art contemporain</strong>
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ARTISTES -->
+        <section class="artists-preview section">
+
+            <div class="section-header">
+
+                <div>
+
+                    <p class="section-label">
+                        LES ARTISTES
+                    </p>
+
+                    <h2>
+                        Rencontrez<br>
+                        <em>les artistes.</em>
+                    </h2>
+
+                </div>
+
+                <a href="artiste.html" class="text-link">
+                    Voir les artistes →
+                </a>
+
+            </div>
+
+
+            <div class="artist-preview-grid" id="featured-artists"><p class="collection-message">Chargement des artistes…</p></div>
+
+        </section>
+
+
+        <!-- APPEL À L'ACTION -->
+        <section class="final-cta">
+
+            <div>
+
+                <p class="section-label">
+                    L'ART EST PARTOUT
+                </p>
+
+                <h2>
+                    Commencez<br>
+                    votre <em>voyage.</em>
+                </h2>
+
+                <a href="oeuvre.html" class="button button-light">
+                    Découvrir les œuvres
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIED DE PAGE -->
+    <footer class="footer">
+
+        <div class="footer-top">
+
+            <div class="footer-logo">
+                ARTGALLERY
+            </div>
+
+            <p>
+                Découvrez l'art.<br>
+                Découvrez les artistes.
+            </p>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 ARTGALLERY
+            </span>
+
+            <span>
+                Galerie d'art en ligne
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <script type="module" src="../js/main.js"></script>
+
+</body>
+
 </html>
