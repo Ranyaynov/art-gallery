@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Galerie d'art — Découvrez l'art</title>
+    <title>ARTGALLERY — Galerie d'art</title>
 
     <meta
         name="description"
-        content="Découvrez notre galerie d'art en ligne et explorez des œuvres et des artistes du monde entier."
+        content="ARTGALLERY, une galerie d'art en ligne inspirée des grands musées."
     >
 
     <link rel="stylesheet" href="css/style.css">
@@ -17,409 +17,492 @@
 
 <body>
 
-    <!-- NAVIGATION -->
-    <header class="header">
-        <nav class="navbar">
+    <!-- CADRE ARCHITECTURAL PRINCIPAL -->
+    <div class="museum-page">
+
+        <!-- MOULURES SUPÉRIEURES -->
+        <div class="top-molding"></div>
+
+        <!-- NAVIGATION -->
+        <header class="header">
 
             <a href="index.html" class="logo">
-                ARTGALLERY
+                <span class="logo-symbol">♜</span>
+                <span>ARTGALLERY</span>
             </a>
 
-            <button class="menu-button" id="menu-button" aria-label="Ouvrir le menu">
-                ☰
-            </button>
-
-            <div class="nav-links" id="nav-links">
+            <nav class="nav">
                 <a href="index.html" class="active">Accueil</a>
                 <a href="gallery.html">Collection</a>
                 <a href="artists.html">Artistes</a>
                 <a href="about.html">À propos</a>
-            </div>
+            </nav>
 
-        </nav>
-    </header>
+            <button class="menu-button" id="menu-button">
+                ☰
+            </button>
 
-
-    <!-- HERO -->
-    <main>
-
-        <section class="hero">
-
-            <div class="hero-overlay"></div>
-
-            <div class="hero-content">
-
-                <p class="small-title">
-                    GALERIE D'ART EN LIGNE
-                </p>
-
-                <h1>
-                    Découvrez<br>
-                    <em>l'art.</em>
-                </h1>
-
-                <p class="hero-description">
-                    Explorez une collection d'œuvres remarquables
-                    et découvrez les artistes qui ont marqué
-                    l'histoire de l'art.
-                </p>
-
-                <a href="gallery.html" class="button">
-                    Explorer la collection
-                </a>
-
-            </div>
-
-        </section>
+        </header>
 
 
-        <!-- INTRODUCTION -->
-        <section class="intro section">
+        <!-- HERO -->
+        <main>
 
-            <div class="intro-number">
-                01
-            </div>
+            <section class="hero">
 
-            <div class="intro-content">
+                <div class="hero-decoration hero-left"></div>
+                <div class="hero-decoration hero-right"></div>
 
-                <p class="section-label">
-                    LA COLLECTION
-                </p>
+                <div class="hero-content">
 
-                <h2>
-                    Un voyage à travers<br>
-                    <em>l'histoire de l'art.</em>
-                </h2>
-
-                <p>
-                    De la peinture classique à l'art contemporain,
-                    notre galerie vous invite à découvrir des œuvres
-                    emblématiques et des artistes aux univers uniques.
-                </p>
-
-                <a href="gallery.html" class="text-link">
-                    Voir toutes les œuvres →
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- ŒUVRES À LA UNE -->
-        <section class="featured section">
-
-            <div class="section-header">
-
-                <div>
-                    <p class="section-label">
-                        SÉLECTION
+                    <p class="small-title">
+                        GALERIE D'ART EN LIGNE
                     </p>
 
-                    <h2>
-                        Œuvres à la une
-                    </h2>
-                </div>
+                    <div class="gold-line"></div>
 
-                <a href="gallery.html" class="text-link">
-                    Toute la collection →
-                </a>
+                    <h1>
+                        L'art<br>
+                        <em>à travers</em><br>
+                        le temps.
+                    </h1>
 
-            </div>
-
-
-            <div class="artwork-grid" id="featured-artworks">
-
-                <!-- ŒUVRE 1 -->
-                <article class="artwork-card">
-
-                    <div class="artwork-image">
-                        <img src="images/oeuvre1.jpg" alt="Œuvre d'art numéro 1">
-                    </div>
-
-                    <div class="artwork-info">
-
-                        <div>
-                            <p class="artwork-category">
-                                PEINTURE
-                            </p>
-
-                            <h3>
-                                Œuvre numéro 01
-                            </h3>
-
-                            <p>
-                                Artiste contemporain
-                            </p>
-                        </div>
-
-                        <span>
-                            01
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- ŒUVRE 2 -->
-                <article class="artwork-card">
-
-                    <div class="artwork-image">
-                        <img src="images/oeuvre2.jpg" alt="Œuvre d'art numéro 2">
-                    </div>
-
-                    <div class="artwork-info">
-
-                        <div>
-                            <p class="artwork-category">
-                                ART CLASSIQUE
-                            </p>
-
-                            <h3>
-                                Œuvre numéro 02
-                            </h3>
-
-                            <p>
-                                Artiste historique
-                            </p>
-                        </div>
-
-                        <span>
-                            02
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- ŒUVRE 3 -->
-                <article class="artwork-card">
-
-                    <div class="artwork-image">
-                        <img src="images/oeuvre3.jpg" alt="Œuvre d'art numéro 3">
-                    </div>
-
-                    <div class="artwork-info">
-
-                        <div>
-                            <p class="artwork-category">
-                                ART MODERNE
-                            </p>
-
-                            <h3>
-                                Œuvre numéro 03
-                            </h3>
-
-                            <p>
-                                Artiste moderne
-                            </p>
-                        </div>
-
-                        <span>
-                            03
-                        </span>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- PÉRIODES -->
-        <section class="periods section">
-
-            <div class="periods-intro">
-
-                <p class="section-label">
-                    PÉRIODES
-                </p>
-
-                <h2>
-                    Explorez<br>
-                    les différentes<br>
-                    <em>époques.</em>
-                </h2>
-
-            </div>
-
-
-            <div class="period-list">
-
-                <a href="gallery.html" class="period-item">
-                    <span>01</span>
-                    <strong>Antiquité</strong>
-                    <span>→</span>
-                </a>
-
-                <a href="gallery.html" class="period-item">
-                    <span>02</span>
-                    <strong>Renaissance</strong>
-                    <span>→</span>
-                </a>
-
-                <a href="gallery.html" class="period-item">
-                    <span>03</span>
-                    <strong>Art moderne</strong>
-                    <span>→</span>
-                </a>
-
-                <a href="gallery.html" class="period-item">
-                    <span>04</span>
-                    <strong>Art contemporain</strong>
-                    <span>→</span>
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- ARTISTES -->
-        <section class="artists-preview section">
-
-            <div class="section-header">
-
-                <div>
-
-                    <p class="section-label">
-                        LES ARTISTES
+                    <p class="hero-text">
+                        Découvrez une sélection d'œuvres qui racontent
+                        l'histoire de l'art, des grands maîtres aux
+                        artistes contemporains.
                     </p>
 
-                    <h2>
-                        Rencontrez<br>
-                        <em>les artistes.</em>
-                    </h2>
+                    <a href="gallery.html" class="gold-button">
+                        Découvrir la collection
+                        <span>→</span>
+                    </a>
 
                 </div>
 
-                <a href="artists.html" class="text-link">
-                    Voir les artistes →
-                </a>
+                <div class="hero-art">
 
-            </div>
+                    <div class="large-frame">
 
+                        <div class="frame-inner">
 
-            <div class="artist-preview-grid">
+                            <img
+                                src="images/hero.jpg"
+                                alt="Œuvre d'art présentée dans la galerie"
+                            >
 
-                <article class="artist-preview">
+                        </div>
 
-                    <div class="artist-number">
-                        01
                     </div>
 
-                    <h3>
-                        Léonard<br>
-                        de Vinci
-                    </h3>
-
-                    <p>
-                        Peintre · Inventeur
-                    </p>
-
-                </article>
-
-
-                <article class="artist-preview">
-
-                    <div class="artist-number">
-                        02
+                    <div class="painting-label">
+                        <span>ŒUVRE DU MOMENT</span>
+                        <strong>01</strong>
                     </div>
 
-                    <h3>
-                        Vincent<br>
-                        van Gogh
-                    </h3>
+                </div>
 
-                    <p>
-                        Peintre · Art moderne
-                    </p>
-
-                </article>
+            </section>
 
 
-                <article class="artist-preview">
+            <!-- PANNEAU CATÉGORIES -->
+            <section class="categories">
 
-                    <div class="artist-number">
-                        03
+                <div class="category">
+
+                    <span class="category-icon">♢</span>
+
+                    <div>
+                        <h3>Peintures</h3>
+                        <p>Explorer les œuvres</p>
                     </div>
 
-                    <h3>
-                        Claude<br>
-                        Monet
-                    </h3>
+                </div>
 
-                    <p>
-                        Peintre · Impressionnisme
-                    </p>
+                <div class="category">
 
-                </article>
+                    <span class="category-icon">◈</span>
 
-            </div>
+                    <div>
+                        <h3>Sculptures</h3>
+                        <p>Découvrir les formes</p>
+                    </div>
 
-        </section>
+                </div>
+
+                <div class="category">
+
+                    <span class="category-icon">✦</span>
+
+                    <div>
+                        <h3>Photographies</h3>
+                        <p>Voir les collections</p>
+                    </div>
+
+                </div>
+
+                <div class="category">
+
+                    <span class="category-icon">▣</span>
+
+                    <div>
+                        <h3>Art contemporain</h3>
+                        <p>Explorer la création</p>
+                    </div>
+
+                </div>
+
+            </section>
 
 
-        <!-- APPEL À L'ACTION -->
-        <section class="final-cta">
+            <!-- COLLECTION -->
+            <section class="collection-section">
 
-            <div>
+                <div class="section-heading">
 
-                <p class="section-label">
-                    L'ART EST PARTOUT
+                    <div class="ornament-line"></div>
+
+                    <div>
+                        <p>NOTRE SÉLECTION</p>
+                        <h2>Œuvres choisies</h2>
+                    </div>
+
+                    <div class="ornament-line"></div>
+
+                </div>
+
+                <p class="section-intro">
+                    Une sélection d'œuvres remarquables choisies
+                    pour leur histoire, leur beauté et leur caractère.
                 </p>
 
+
+                <div class="art-grid">
+
+                    <!-- ŒUVRE 1 -->
+                    <article class="art-card">
+
+                        <div class="art-frame">
+
+                            <div class="art-image">
+
+                                <img
+                                    src="images/oeuvre1.jpg"
+                                    alt="Œuvre d'art numéro 1"
+                                >
+
+                            </div>
+
+                        </div>
+
+                        <div class="art-info">
+
+                            <div>
+                                <span class="art-number">01</span>
+                                <span class="art-category">PEINTURE</span>
+                            </div>
+
+                            <h3>La lumière du matin</h3>
+
+                            <p>Collection ARTGALLERY</p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ŒUVRE 2 -->
+                    <article class="art-card">
+
+                        <div class="art-frame">
+
+                            <div class="art-image">
+
+                                <img
+                                    src="images/oeuvre2.jpg"
+                                    alt="Œuvre d'art numéro 2"
+                                >
+
+                            </div>
+
+                        </div>
+
+                        <div class="art-info">
+
+                            <div>
+                                <span class="art-number">02</span>
+                                <span class="art-category">ART CLASSIQUE</span>
+                            </div>
+
+                            <h3>Portrait d'une époque</h3>
+
+                            <p>Collection ARTGALLERY</p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ŒUVRE 3 -->
+                    <article class="art-card">
+
+                        <div class="art-frame">
+
+                            <div class="art-image">
+
+                                <img
+                                    src="images/oeuvre3.jpg"
+                                    alt="Œuvre d'art numéro 3"
+                                >
+
+                            </div>
+
+                        </div>
+
+                        <div class="art-info">
+
+                            <div>
+                                <span class="art-number">03</span>
+                                <span class="art-category">ART MODERNE</span>
+                            </div>
+
+                            <h3>Couleurs et émotions</h3>
+
+                            <p>Collection ARTGALLERY</p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="center-button">
+
+                    <a href="gallery.html" class="outline-button">
+                        Voir toute la collection
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- ESPACE MUSÉE -->
+            <section class="museum-section">
+
+                <div class="museum-columns">
+
+                    <div class="museum-image">
+
+                        <div class="architectural-frame">
+
+                            <img
+                                src="images/hero.jpg"
+                                alt="Espace de galerie"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="museum-text">
+
+                        <p class="small-title">
+                            L'ESPACE ARTGALLERY
+                        </p>
+
+                        <div class="gold-line"></div>
+
+                        <h2>
+                            Prenez le temps<br>
+                            de <em>regarder.</em>
+                        </h2>
+
+                        <p>
+                            Comme dans un musée, ARTGALLERY vous invite
+                            à prendre le temps de découvrir chaque œuvre,
+                            son histoire et l'artiste qui se cache derrière.
+                        </p>
+
+                        <a href="about.html" class="text-link">
+                            Découvrir notre histoire →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ARTISTES -->
+            <section class="artists-section">
+
+                <div class="section-heading">
+
+                    <div class="ornament-line"></div>
+
+                    <div>
+                        <p>LES GRANDS MAÎTRES</p>
+                        <h2>Artistes</h2>
+                    </div>
+
+                    <div class="ornament-line"></div>
+
+                </div>
+
+
+                <div class="artists-grid">
+
+                    <article class="artist-card">
+
+                        <div class="artist-image">
+                            <img
+                                src="images/artiste1.jpg"
+                                alt="Portrait de Léonard de Vinci"
+                            >
+                        </div>
+
+                        <div class="artist-info">
+                            <span>01</span>
+                            <h3>Léonard de Vinci</h3>
+                            <p>Peintre · Inventeur</p>
+                        </div>
+
+                    </article>
+
+
+                    <article class="artist-card">
+
+                        <div class="artist-image">
+                            <img
+                                src="images/artiste2.jpg"
+                                alt="Portrait de Vincent van Gogh"
+                            >
+                        </div>
+
+                        <div class="artist-info">
+                            <span>02</span>
+                            <h3>Vincent van Gogh</h3>
+                            <p>Peintre · Art moderne</p>
+                        </div>
+
+                    </article>
+
+
+                    <article class="artist-card">
+
+                        <div class="artist-image">
+                            <img
+                                src="images/artiste3.jpg"
+                                alt="Portrait de Claude Monet"
+                            >
+                        </div>
+
+                        <div class="artist-info">
+                            <span>03</span>
+                            <h3>Claude Monet</h3>
+                            <p>Peintre · Impressionnisme</p>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- CTA -->
+            <section class="final-section">
+
+                <div class="final-ornament">
+                    ✦
+                </div>
+
+                <p>ARTGALLERY</p>
+
                 <h2>
-                    Commencez<br>
-                    votre <em>voyage.</em>
+                    L'art mérite<br>
+                    <em>d'être découvert.</em>
                 </h2>
 
-                <a href="gallery.html" class="button button-light">
-                    Découvrir les œuvres
+                <a href="gallery.html" class="gold-button">
+                    Entrer dans la galerie
+                    <span>→</span>
                 </a>
 
-            </div>
+            </section>
 
-        </section>
-
-    </main>
+        </main>
 
 
-    <!-- PIED DE PAGE -->
-    <footer class="footer">
-
-        <div class="footer-top">
+        <!-- FOOTER -->
+        <footer class="footer">
 
             <div class="footer-logo">
-                ARTGALLERY
+
+                <span class="logo-symbol">♜</span>
+
+                <h3>ARTGALLERY</h3>
+
+                <p>
+                    L'art, l'histoire et les émotions.
+                </p>
+
             </div>
 
-            <p>
-                Découvrez l'art.<br>
-                Découvrez les artistes.
-            </p>
 
-        </div>
+            <div class="footer-column">
+
+                <h4>Navigation</h4>
+
+                <a href="index.html">Accueil</a>
+                <a href="gallery.html">Collection</a>
+                <a href="artists.html">Artistes</a>
+                <a href="about.html">À propos</a>
+
+            </div>
 
 
-        <div class="footer-bottom">
+            <div class="footer-column">
 
-            <span>
-                © 2026 ARTGALLERY
-            </span>
+                <h4>La galerie</h4>
 
-            <span>
-                Galerie d'art en ligne
-            </span>
+                <a href="gallery.html">Peintures</a>
+                <a href="gallery.html">Sculptures</a>
+                <a href="gallery.html">Photographies</a>
+                <a href="gallery.html">Art contemporain</a>
 
-        </div>
+            </div>
 
-    </footer>
 
+            <div class="footer-column">
+
+                <h4>Nous suivre</h4>
+
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Pinterest</a>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <span>© 2026 ARTGALLERY</span>
+
+                <span>Une galerie imaginée avec passion.</span>
+
+            </div>
+
+        </footer>
+
+        <!-- MOULURE INFÉRIEURE -->
+        <div class="bottom-molding"></div>
+
+    </div>
 
     <script src="js/script.js"></script>
 
