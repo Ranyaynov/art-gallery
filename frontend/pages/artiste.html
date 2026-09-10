@@ -1,138 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Artistes — ArtGallery</title>
 
     <meta
-        name="description"
-        content="Découvrez les artistes présentés dans notre galerie d'art."
-    >
+      name="description"
+      content="Découvrez les artistes présentés dans notre galerie d'art."
+    />
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
 
-</head>
-
-
-<body>
-<a class="skip-link" href="#main">Aller au contenu</a>
+  <body>
+    <a class="skip-link" href="#main">Aller au contenu</a>
 
     <!-- NAVIGATION -->
 
     <header class="header">
+      <nav class="navbar">
+        <a href="index.html" class="logo"> ARTGALLERY </a>
 
-        <nav class="navbar">
+        <button
+          class="menu-button"
+          id="menu-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-links"
+          aria-label="Ouvrir le menu"
+        >
+          ☰
+        </button>
 
-            <a href="index.html" class="logo">
-                ARTGALLERY
-            </a>
+        <div class="nav-links" id="nav-links">
+          <a href="index.html"> Accueil </a>
 
-            <button
-                class="menu-button"
-                id="menu-button" type="button" aria-expanded="false" aria-controls="nav-links"
-                aria-label="Ouvrir le menu"
-            >
-                ☰
-            </button>
+          <a href="oeuvre.html"> Collection </a>
 
-            <div class="nav-links" id="nav-links">
+          <a href="artiste.html" class="active" aria-current="page">
+            Artistes
+          </a>
 
-                <a href="index.html">
-                    Accueil
-                </a>
-
-                <a href="oeuvre.html">
-                    Collection
-                </a>
-
-                <a href="artiste.html" class="active" aria-current="page">
-                    Artistes
-                </a>
-
-                <a href="index.html#about">
-                    À propos
-                </a>
-
-            </div>
-
-        </nav>
-
+          <a href="index.html#about"> À propos </a>
+        </div>
+      </nav>
     </header>
 
-
     <main id="main">
+      <!-- EN-TÊTE -->
 
-        <!-- EN-TÊTE -->
+      <section class="page-header">
+        <p class="section-label">LES ARTISTES</p>
 
-        <section class="page-header">
+        <h1>Les <em>artistes.</em></h1>
 
-            <p class="section-label">
-                LES ARTISTES
-            </p>
+        <p>
+          Découvrez les artistes qui ont contribué à façonner l'histoire de
+          l'art.
+        </p>
+      </section>
 
-            <h1>
-                Les <em>artistes.</em>
-            </h1>
+      <section class="search-section">
+        <div class="search-box">
+          <input
+            type="search"
+            id="search-input"
+            placeholder="Rechercher un artiste sur cette page…"
+            aria-label="Rechercher un artiste sur cette page"
+            disabled
+          /><button id="search-button" type="button">Rechercher</button>
+        </div>
+      </section>
+      <!-- ARTISTES -->
 
-            <p>
-                Découvrez les artistes qui ont contribué
-                à façonner l'histoire de l'art.
-            </p>
+      <section class="artists-section">
+        <p id="collection-status" role="status" aria-live="polite"></p>
 
-        </section>
+        <div class="artists-grid" id="artists-grid" aria-busy="true">
+          <p class="collection-message">Chargement de la collection…</p>
+        </div>
 
-
-        <section class="search-section"><div class="search-box"><input type="search" id="search-input" placeholder="Rechercher un artiste sur cette page…" aria-label="Rechercher un artiste sur cette page" disabled><button id="search-button" type="button">Rechercher</button></div></section>
-<!-- ARTISTES -->
-
-        <section class="artists-section"><p id="collection-status" role="status" aria-live="polite"></p>
-
-            <div class="artists-grid" id="artists-grid" aria-busy="true"><p class="collection-message">Chargement de la collection…</p></div>
-
-        <nav class="pagination" aria-label="Pagination de la collection"><button id="previous" type="button" disabled>← Précédent</button><span id="page-label" aria-live="polite">Page 1</span><button id="next" type="button" disabled>Suivant →</button></nav></section>
-
+        <nav class="pagination" aria-label="Pagination de la collection">
+          <button id="previous" type="button" disabled>← Précédent</button
+          ><span id="page-label" aria-live="polite">Page 1</span
+          ><button id="next" type="button" disabled>Suivant →</button>
+        </nav>
+      </section>
     </main>
-
 
     <!-- PIED DE PAGE -->
 
     <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-logo">ARTGALLERY</div>
 
-        <div class="footer-top">
+        <p>
+          Découvrez l'art.<br />
+          Découvrez les artistes.
+        </p>
+      </div>
 
-            <div class="footer-logo">
-                ARTGALLERY
-            </div>
+      <div class="footer-bottom">
+        <span> © 2026 ARTGALLERY </span>
 
-            <p>
-                Découvrez l'art.<br>
-                Découvrez les artistes.
-            </p>
-
-        </div>
-
-        <div class="footer-bottom">
-
-            <span>
-                © 2026 ARTGALLERY
-            </span>
-
-            <span>
-                Galerie d'art en ligne
-            </span>
-
-        </div>
-
+        <span> Galerie d'art en ligne </span>
+      </div>
     </footer>
 
-
-    <script type="module" src="../js/main.js"></script>
-
-</body>
-
+    <script type="module" src="/js/main.js"></script>
+  </body>
 </html>

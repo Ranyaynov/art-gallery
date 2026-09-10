@@ -1,182 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Collection — ArtGallery</title>
 
     <meta
-        name="description"
-        content="Explorez notre collection d'œuvres d'art."
-    >
+      name="description"
+      content="Explorez notre collection d'œuvres d'art."
+    />
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
 
-</head>
-
-
-<body>
-<a class="skip-link" href="#main">Aller au contenu</a>
+  <body>
+    <a class="skip-link" href="#main">Aller au contenu</a>
 
     <!-- NAVIGATION -->
 
     <header class="header">
+      <nav class="navbar">
+        <a href="index.html" class="logo"> ARTGALLERY </a>
 
-        <nav class="navbar">
+        <button
+          class="menu-button"
+          id="menu-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-links"
+          aria-label="Ouvrir le menu"
+        >
+          ☰
+        </button>
 
-            <a href="index.html" class="logo">
-                ARTGALLERY
-            </a>
+        <div class="nav-links" id="nav-links">
+          <a href="index.html"> Accueil </a>
 
-            <button
-                class="menu-button"
-                id="menu-button" type="button" aria-expanded="false" aria-controls="nav-links"
-                aria-label="Ouvrir le menu"
-            >
-                ☰
-            </button>
+          <a href="oeuvre.html" class="active" aria-current="page">
+            Collection
+          </a>
 
-            <div class="nav-links" id="nav-links">
+          <a href="artiste.html"> Artistes </a>
 
-                <a href="index.html">
-                    Accueil
-                </a>
-
-                <a href="oeuvre.html" class="active" aria-current="page">
-                    Collection
-                </a>
-
-                <a href="artiste.html">
-                    Artistes
-                </a>
-
-                <a href="index.html#about">
-                    À propos
-                </a>
-
-            </div>
-
-        </nav>
-
+          <a href="index.html#about"> À propos </a>
+        </div>
+      </nav>
     </header>
 
-
     <main id="main">
+      <!-- EN-TÊTE -->
 
-        <!-- EN-TÊTE -->
+      <section class="page-header">
+        <p class="section-label">LA COLLECTION</p>
 
-        <section class="page-header">
+        <h1>Les <em>œuvres.</em></h1>
 
-            <p class="section-label">
-                LA COLLECTION
-            </p>
+        <p>
+          Parcourez notre sélection d'œuvres et découvrez différents styles
+          artistiques.
+        </p>
+      </section>
 
-            <h1>
-                Les <em>œuvres.</em>
-            </h1>
+      <!-- RECHERCHE -->
 
-            <p>
-                Parcourez notre sélection d'œuvres
-                et découvrez différents styles artistiques.
-            </p>
+      <section class="search-section">
+        <div class="search-box">
+          <input
+            type="search"
+            id="search-input"
+            placeholder="Rechercher sur cette page…"
+            aria-label="Rechercher une œuvre sur cette page"
+            disabled
+          />
 
-        </section>
+          <button id="search-button">Rechercher</button>
+        </div>
+      </section>
 
+      <!-- FILTRES -->
 
-        <!-- RECHERCHE -->
+      <section class="filters">
+        <button class="filter active" data-filter="all" aria-pressed="true">
+          Toutes
+        </button>
 
-        <section class="search-section">
+        <button class="filter" data-filter="painting" aria-pressed="false">
+          Peinture
+        </button>
 
-            <div class="search-box">
+        <button class="filter" data-filter="sculpture" aria-pressed="false">
+          Sculpture
+        </button>
 
-                <input
-                    type="search"
-                    id="search-input"
-                    placeholder="Rechercher sur cette page…"
-                    aria-label="Rechercher une œuvre sur cette page" disabled
-                >
+        <button class="filter" data-filter="photography" aria-pressed="false">
+          Photographie
+        </button>
+      </section>
 
-                <button id="search-button">
-                    Rechercher
-                </button>
+      <!-- COLLECTION -->
 
-            </div>
+      <section class="gallery-section">
+        <p id="collection-status" role="status" aria-live="polite"></p>
 
-        </section>
+        <div class="gallery-grid" id="gallery-grid" aria-busy="true">
+          <p class="collection-message">Chargement de la collection…</p>
+        </div>
 
-
-        <!-- FILTRES -->
-
-        <section class="filters">
-
-            <button class="filter active" data-filter="all" aria-pressed="true">
-                Toutes
-            </button>
-
-            <button class="filter" data-filter="painting" aria-pressed="false">
-                Peinture
-            </button>
-
-            <button class="filter" data-filter="sculpture" aria-pressed="false">
-                Sculpture
-            </button>
-
-            <button class="filter" data-filter="photography" aria-pressed="false">
-                Photographie
-            </button>
-
-        </section>
-
-
-        <!-- COLLECTION -->
-
-        <section class="gallery-section"><p id="collection-status" role="status" aria-live="polite"></p>
-
-            <div class="gallery-grid" id="gallery-grid" aria-busy="true"><p class="collection-message">Chargement de la collection…</p></div>
-
-        <nav class="pagination" aria-label="Pagination de la collection"><button id="previous" type="button" disabled>← Précédent</button><span id="page-label" aria-live="polite">Page 1</span><button id="next" type="button" disabled>Suivant →</button></nav></section>
-
+        <nav class="pagination" aria-label="Pagination de la collection">
+          <button id="previous" type="button" disabled>← Précédent</button
+          ><span id="page-label" aria-live="polite">Page 1</span
+          ><button id="next" type="button" disabled>Suivant →</button>
+        </nav>
+      </section>
     </main>
-
 
     <!-- PIED DE PAGE -->
 
     <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-logo">ARTGALLERY</div>
 
-        <div class="footer-top">
+        <p>
+          Découvrez l'art.<br />
+          Découvrez les artistes.
+        </p>
+      </div>
 
-            <div class="footer-logo">
-                ARTGALLERY
-            </div>
+      <div class="footer-bottom">
+        <span> © 2026 ARTGALLERY </span>
 
-            <p>
-                Découvrez l'art.<br>
-                Découvrez les artistes.
-            </p>
-
-        </div>
-
-        <div class="footer-bottom">
-
-            <span>
-                © 2026 ARTGALLERY
-            </span>
-
-            <span>
-                Galerie d'art en ligne
-            </span>
-
-        </div>
-
+        <span> Galerie d'art en ligne </span>
+      </div>
     </footer>
 
-
-    <script type="module" src="../js/main.js"></script>
-
-</body>
-
+    <script type="module" src="/js/main.js"></script>
+  </body>
 </html>
